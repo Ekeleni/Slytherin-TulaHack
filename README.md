@@ -30,5 +30,5 @@
 - PostgreSQL
 - HTML
 - CSS
-- Bootstrap
+- AnimateCSS
 
