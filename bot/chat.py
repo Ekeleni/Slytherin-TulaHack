@@ -1,6 +1,6 @@
 from aiogram.types import Message
 from aiogram import Dispatcher
-from config import texts, bot, dp
+from config import texts, bot, dp, get_event_date
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
 
 
@@ -17,11 +17,20 @@ async def help_message(message: Message):
 async def change_day(message: Message):
     key = ReplyKeyboardMarkup(resize_keyboard=True)
     key.add(KeyboardButton('Сегодня'), KeyboardButton('Завтра'), KeyboardButton('На этой неделе'),
-            KeyboardButton('В это месяце'))
+            KeyboardButton('В этом месяце'))
     await bot.send_message(message.chat.id, 'Выбери дату мероприятия:', reply_markup=key)
+
+
+async def booking_event(message: Message):
+    print(get_event_date(message.text))
+    await bot.send_message(message.chat.id, 'Привет')
 
 
 def init_chat(dp: Dispatcher):
     dp.register_message_handler(start_message, commands=['start'])
-    dp.register_message_handler(help_message, lambda message: message.text == "Помощь")
-    dp.register_message_handler(change_day, lambda message: message.text == "Мероприятия")
+    dp.register_message_handler(help_message, lambda message: message.text == 'Помощь')
+    dp.register_message_handler(change_day, lambda message: message.text == 'Мероприятия')
+    dp.register_message_handler(booking_event, lambda message: message.text == 'Сегодня')
+    dp.register_message_handler(booking_event, lambda message: message.text == 'Завтра')
+    dp.register_message_handler(booking_event, lambda message: message.text == 'На этой неделе')
+    dp.register_message_handler(booking_event, lambda message: message.text == 'В этом месяце')
