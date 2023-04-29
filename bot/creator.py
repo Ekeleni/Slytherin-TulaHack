@@ -72,7 +72,17 @@ async def reg(message: Message, state: FSMContext):
 
 
 async def my_events(message: Message):
-    await bot.send_message(message.chat.id, db.get_my_events(message.chat.id))
+    id = 0
+    result = db.get_my_events(message.chat.id)
+    if not result:
+        await bot.send_message(message.chat.id, 'Их еще нет (')
+    else:
+        if len(result) == 1:
+            await bot.send_message(message.chat.id, f'{result[id][2]}\n{result[id][3]}\n\nДата: {result[id][4]}\nВремя: {result[id][5]}\nСтоимость: {result[id][6]}')
+        else:
+            for i in range(len(result)):
+                await bot.send_message(message.chat.id,
+                                       f'{result[i][2]}\n{result[i][3]}\n\nДата: {result[i][4]}\nВремя: {result[i][5]}\nСтоимость: {result[i][6]}')
 
 
 def init_creator(dp: Dispatcher):
