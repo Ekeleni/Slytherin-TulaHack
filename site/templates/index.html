@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static' ,filename='styles_index.css')}}">
+    <title>Что? Где? Тула!</title>
+</head>
+<body>
+    <div class="cont">
+        <div class="nav">
+            <!--Название навигационной панели меняется от прав пользователя. У админа и модера - Модерация. У креатора - Мероприятия -->
+            <h1 class="nav_brand">Модерация</h1>
+            <div class="nav_items">
+                <li class="item_nav active"><a>Hовые</a></li>
+                <li class="item_nav"><a>Модераторы</a></li>
+            </div>
+        </div>
+        <div class="info">
+            <div class="card">
+                <h3 class="card_brand">Сектанский марш</h3>
+                <p class="card_text">Мы проводим обряды на людях </p>
+                <div class="card_buttons">
+                    <div class="card_button default"><a>Подробнее</a></div>
+                    <div class="card_button agree"><a>Принять</a></div>
+                    <div class="card_button delete"><a>Отклонить</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
