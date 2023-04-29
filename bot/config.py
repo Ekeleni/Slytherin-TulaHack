@@ -16,15 +16,16 @@ texts = {
 
 
 def get_event_date(date):
+
     date_current = datetime.now()
     match date:
         case 'Сегодня':
-            return [[date_current.day, date_current.month, date_current.year]]
+            return [[f'{date_current.day}.0{date_current.month}.{date_current.year}']]
         case 'Завтра':
-            return [[int(date_current.day) + 1, date_current.month, date_current.year]]
+            return [[f'{int(date_current.day) + 1}.0{date_current.month}.{date_current.year}d']]
         case 'На этой неделе':
             date_time = list()
             for i in range(7 - date_current.weekday()):
-                date_time.append([int(date_current.day) + i, date_current.month, date_current.year])
+                date_time.append([f'{int(date_current.day) + i}.0{date_current.month}.{date_current.year}'])
             return date_time
 
