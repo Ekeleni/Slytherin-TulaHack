@@ -30,7 +30,7 @@ async def reg_name(message: Message, state: FSMContext):
 async def reg_text(message: Message, state: FSMContext):
     async with state.proxy() as data:
         data['text'] = message.text
-    await bot.send_message(message.chat.id, 'Прикольно. А теперь дату твоего события в формате: ХХ.ХХ.ХХ')
+    await bot.send_message(message.chat.id, 'Прикольно. А теперь дату твоего события в формате: ХХ.ХХ.XXХХ')
     await Event.next()
 
 
