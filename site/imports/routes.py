@@ -1,5 +1,5 @@
 main = "/"
-login = "/login"
+show = "/main"
 reg = "/reg"
 moder = '/mod'
 form = '/form'

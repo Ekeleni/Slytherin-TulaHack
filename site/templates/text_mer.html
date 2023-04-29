@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={{ url_for('static',filename= "styles_text.css")}}>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='styles_mer.css') }}">
     <title>Что? Где? Тула!</title>
 </head>
 <body>
-    <div class="text_mer">
-        <h2 class="mer_naz">Название</з>
-        <p class="mer_text">Чтото обо мне</p>
-        <p class="mer_date">30.02.22</p>
-        <p class="mer_adress">Ул. Программиста, д. 1110</p>
+    <div class="cont">
+        <div class="nav">
+            <!--Название навигационной панели меняется от прав пользователя. У админа и модера - Модерация. У креатора - Мероприятия -->
+            <h1 class="nav_brand">Мероприятие</h1>
+            <div class="nav_items">
+                <li class="item_nav"><a href="{{ url_for('modPage') }}">Мои</a></li>
+                <li class="item_nav active"><a href="{{ url_for('formPage') }}">Новое</a></li>
+            </div>
+        </div>
+        <div class="info">
+            <div class="card">
+                <h3 class="card_brand">Дискотека</h3>
+                <p class="card_text">Весело </p>
+            </div>
+        </div>
     </div>
-
 </body>
 </html>
