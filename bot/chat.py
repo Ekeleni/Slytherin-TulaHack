@@ -7,7 +7,7 @@ from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemo
 
 async def start_message(message: Message):
     key = ReplyKeyboardMarkup(resize_keyboard=True)
-    key.add(KeyboardButton('Помощь'), KeyboardButton('Мероприятия'), KeyboardButton('Создать'))
+    key.add(KeyboardButton('Помощь'), KeyboardButton('Мероприятия'), KeyboardButton('Создать'), KeyboardButton('Мои '))
     await bot.send_message(message.chat.id, texts['start'], parse_mode='HTML', reply_markup=key)
 
 

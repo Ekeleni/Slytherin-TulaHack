@@ -29,3 +29,11 @@ def get_event_date(date):
                 date_time.append([f'{int(date_current.day) + i}.0{date_current.month}.{date_current.year}'])
             return date_time
 
+
+def is_valid_date(input_date):
+    try:
+        datetime.strptime(input_date, '%d.%m.%Y')
+        return True
+    except ValueError as ex:
+        print(ex)
+        return False

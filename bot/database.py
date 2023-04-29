@@ -17,7 +17,15 @@ def create_events_reg_base():
 def create_events_base():
     curs = conn.cursor()
     curs.execute('''CREATE TABLE events 
-    (author_id INT NOT NULL, event_id INT NOT NULL, event_name TEXT NOT NULL, event_text TEXT NOT NULl, date TEXT NOT NULl, price INT, adress TEXT NOT NULL);''')
+    (author_id INT NOT NULL, event_id INT NOT NULL, event_name TEXT NOT NULL, event_text TEXT NOT NULl, date TEXT NOT NULl, time TEXT NOT NULL, price INT, adress TEXT NOT NULL);''')
+    conn.commit()
+    curs.close()
+
+
+def create_events_load_base():
+    curs = conn.cursor()
+    curs.execute('''CREATE TABLE events_load 
+        (author_id INT NOT NULL, event_id INT NOT NULL, event_name TEXT NOT NULL, event_text TEXT NOT NULl, date TEXT NOT NULl, time TEXT NOT NULL, price INT, adress TEXT NOT NULL);''')
     conn.commit()
     curs.close()
 
@@ -44,12 +52,23 @@ def get_events(date):
     curs.close()
 
 
-def add_event(author_id, event_name, event_text, price, address):
+def add_event(author_id, event_name, event_text, time, price, address):
     curs = conn.cursor()
     curs.execute('''INSERT INTO events
-                          (author_id, event_id, event_name, event_text, price, address)
+                          (author_id, event_id, event_name, event_text, date, time, price, adress)
                           VALUES
-                          (%s, %s, %s, %s, %s, %s);''', (author_id, get_new_event_id(), event_name, event_text,
+                          (%s, %s, %s, %s, %s, %s, %s, %s);''', (author_id, get_new_event_id(), event_name, event_text, date, time,
+                                                         price, address))
+    conn.commit()
+    curs.close()
+
+
+def add_event_load(author_id, event_name, event_text, date, time, price, address):
+    curs = conn.cursor()
+    curs.execute('''INSERT INTO events_load
+                          (author_id, event_id, event_name, event_text, date, time, price, adress)
+                          VALUES
+                          (%s, %s, %s, %s, %s, %s, %s, %s);''', (author_id, get_new_event_id(), event_name, event_text, date, time,
                                                          price, address))
     conn.commit()
     curs.close()
@@ -71,4 +90,12 @@ def add_user(author_id, event_id, price, user_id):
                           (%s, %s, %s, %s, %s);''', (author_id, event_id, price, user_id))
     conn.commit()
     curs.close()
+
+
+def get_my_events(user_id):
+    curs = conn.cursor()
+    curs.execute('''SELECT * from events_load WHERE author_id=%s''', (user_id,))
+    res = curs.fetchall()
+    curs.close()
+    return res
 
