@@ -14,13 +14,16 @@ def mainPage():
         redirect(url_for('/mod'))
     return render_template("index.html")
 
+
 @app.route(routes.moder , methods = ['POST' , 'GET'])
 def modPage():
     return render_template('text_mer.html')
 
+
 @app.route(routes.form , methods = ['GET' ,'POST'])
 def formPage():
     return render_template('form_mer.html')
+
 
 @app.route(routes.reg , methods = ['GET' , 'POST'])
 def regPage():
