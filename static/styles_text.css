@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@media (max-device-width:1199px) {
+    * {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+    }
+    .nav_brand {
+        font-weight: 600;
+        font-size:36px;
+        text-align: center;
+    }
+    .nav_items {
+        padding-top: 48px;
+        display: flex;
+    }
+    .item_nav {
+        width: 100px;
+        height: 28px;
+        margin-left: 15px;
+        font-weight: 400;
+        font-size: 16px;
+        list-style-type: none;
+        transition: 0.25s;
+        text-align: center;
+    }
+    .item_nav a{
+        line-height: normal;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+
+    }
+    .item_nav:hover {
+        background: #F4FFFF;
+        border-radius: 20px;
+        transition: 0.25s;
+    }
+    .item_nav.active {
+        background: #E8F3F3;
+        border-radius: 20px;
+    }
+    .reg_h {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        padding-top: 58px;
+        font-size: 16px;
+    }
+    input {
+        width: 100px;
+        height: 20px;
+        margin-top: 11px;
+        background: #FFFFFF;
+        border: 3px solid #E8F3F3;
+        border-radius: 15px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+
+    * {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+    }
+    .nav_brand {
+        font-weight: 600;
+        font-size:36px;
+        text-align: center;
+    }
+    .nav_items {
+        padding-top: 48px;
+        display: flex;
+    }
+    .item_nav {
+        width: 100px;
+        height: 28px;
+        margin-left: 15px;
+        font-weight: 400;
+        font-size: 16px;
+        list-style-type: none;
+        transition: 0.25s;
+        text-align: center;
+    }
+    .item_nav a{
+        line-height: normal;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+
+    }
+    .item_nav:hover {
+        background: #F4FFFF;
+        border-radius: 20px;
+        transition: 0.25s;
+    }
+    .item_nav.active {
+        background: #E8F3F3;
+        border-radius: 20px;
+    }
+}
+@media (min-device-width:1200px){
+   * {
+        padding-top: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: 0px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+    }
+    .cont {
+        display: flex;
+    }
+    .nav_brand {
+        font-weight: 600;
+        font-size: 48px;
+    }
+    .nav_items {
+        padding-top: 48px;
+    }
+    .item_nav {
+        width: 211px;
+        height: 58px;
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 24px;
+        list-style-type: none;
+        transition: 0.25s;
+    }
+    .item_nav a{
+        line-height: normal;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+
+    }
+    .item_nav:hover {
+        background: #F4FFFF;
+        border-radius: 20px;
+        transition: 0.25s;
+    }
+    .item_nav.active {
+        background: #E8F3F3;
+        border-radius: 20px;
+    }
+    .card {
+        width: 732px;
+        height: 285px;
+        background: #FFFFFF;
+        border: 3px solid #E8F3F3;
+        border-radius: 15px;
+        box-sizing: border-box;
+    }
+    .card_brand {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        padding-top: 30px;
+        padding-left: 28px;
+    }
+    .card_text {
+        font-family: 'Montserrat';
+        padding-top: 45px;
+        padding-left: 55px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .card_buttons {
+        padding-top: 25px;
+        padding-left: 0px;
+        display: flex;
+    }
+    .card_button {
+        margin-left: 10px;
+    }
+    .card_button.default {
+        width: 172px;
+        height: 53px;
+        background: #E8F3F3;
+        border-radius: 20px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+    }
+    .card_button.agree {
+        width: 172px;
+        height: 53px;
+        background: #FAFF08;
+        border-radius: 20px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+    }
+    .card_button.delete {
+        width: 172px;
+        height: 53px;
+        background: #FF360A;
+        border-radius: 20px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        color: white;
+        line-height: 29px;
+        text-align: center;
+    }
+    .card_button a {
+        line-height: normal;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+    }
+    * {
+        padding-top: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: 0px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+    }
+    .cont {
+        display: flex;
+    }
+    .nav_brand {
+        font-weight: 600;
+        font-size: 48px;
+    }
+    .nav_items {
+        padding-top: 48px;
+    }
+    .item_nav {
+        width: 211px;
+        height: 58px;
+        margin-bottom: 15px;
+        font-weight: 400;
+        font-size: 24px;
+        list-style-type: none;
+        transition: 0.25s;
+    }
+    .item_nav a{
+        line-height: normal;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+
+    }
+    .item_nav:hover {
+        background: #F4FFFF;
+        border-radius: 20px;
+        transition: 0.25s;
+    }
+    .item_nav.active {
+        background: #E8F3F3;
+        border-radius: 20px;
+    }
+    .reg_h {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        padding-top: 58px;
+        font-size: 36px;
+    }
+    input {
+        width: 220px;
+        height: 40px;
+        margin-top: 11px;
+        background: #FFFFFF;
+        border: 3px solid #E8F3F3;
+        border-radius: 15px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
