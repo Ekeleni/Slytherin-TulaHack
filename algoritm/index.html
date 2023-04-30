@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Попадание точек в окружность</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=b84bce5d-1f29-4cb7-9fcd-8810e32022c4" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+    <script src="main.js" type="module"></script>
+    <style>
+        body, html {
+            font-family: Arial;
+            font-size: 11pt;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 95%;
+        }
+        p {
+            padding: 10px;
+        }
+        #map {
+            width: 100%;
+            height: 90%;
+        }
+    </style>
+</head>
+<body>
+<p>Перетаскивайте круг и следите за цветом меток</p>
+<div id="map"></div>
+</body>
+
+</html>
