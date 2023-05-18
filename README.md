@@ -31,4 +31,5 @@
 - HTML
 - CSS
 - AnimateCSS
+- JavaScript
 
